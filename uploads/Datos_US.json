@@ -1,0 +1,178 @@
+{"dim_usuarios": [
+ {
+  "EQUIPO": "PLCC",
+  "DESCRIPCION": "Planeación, lógistica y comunicación de catalogo",
+  "USUARIO": "Carlos Milanes"
+ },
+ {
+  "EQUIPO": "PLCC",
+  "DESCRIPCION": "Planeación, lógistica y comunicación de catalogo",
+  "USUARIO": "Ana Luz Perez"
+ },
+ {
+  "EQUIPO": "PLCC",
+  "DESCRIPCION": "Planeación, lógistica y comunicación de catalogo",
+  "USUARIO": "Aaron Rodriguez"
+ },
+ {
+  "EQUIPO": "PLCC",
+  "DESCRIPCION": "Planeación, lógistica y comunicación de catalogo",
+  "USUARIO": "Ricardo Rodriguez"
+ },
+ {
+  "EQUIPO": "PLCC",
+  "DESCRIPCION": "Planeación, lógistica y comunicación de catalogo",
+  "USUARIO": "Nancy Nuñez"
+ },
+ {
+  "EQUIPO": "PLCC",
+  "DESCRIPCION": "Planeación, lógistica y comunicación de catalogo",
+  "USUARIO": "Lissette Ramsburgh"
+ },
+ {
+  "EQUIPO": "DP CALZADO",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Miriam Barron"
+ },
+ {
+  "EQUIPO": "DP CALZADO",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Monica Juarez"
+ },
+ {
+  "EQUIPO": "DP CALZADO",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Edgar Moreno"
+ },
+ {
+  "EQUIPO": "DP CALZADO",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Francisco Gorozpe"
+ },
+ {
+  "EQUIPO": "DP CALZADO",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Abraham Macias"
+ },
+ {
+  "EQUIPO": "DP CALZADO",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Karla Chavarin"
+ },
+ {
+  "EQUIPO": "DP CALZADO",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Blanca Arguelles"
+ },
+ {
+  "EQUIPO": "DP VESTIR ",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Elena Mendez"
+ },
+ {
+  "EQUIPO": "DP VESTIR ",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Montserrat Rangel"
+ },
+ {
+  "EQUIPO": "DP VESTIR ",
+  "DESCRIPCION": "Diseño de Producto ",
+  "USUARIO": "Grecia Martinez"
+ },
+ {
+  "EQUIPO": "DP y catalogo",
+  "DESCRIPCION": "Diseño de producto y catalogo",
+  "USUARIO": "Ivan Muñoz"
+ },
+ {
+  "EQUIPO": "DP",
+  "DESCRIPCION": "Diseño de producto ",
+  "USUARIO": "Alejandra Gurria"
+ },
+ {
+  "EQUIPO": "DP (PMO",
+  "DESCRIPCION": "Diseño de producto ",
+  "USUARIO": "Hector Ortiz"
+ },
+ {
+  "EQUIPO": "EC",
+  "DESCRIPCION": "Estrategias comerciales",
+  "USUARIO": "Luisa Alvarez"
+ },
+ {
+  "EQUIPO": "EC",
+  "DESCRIPCION": "Estrategias comerciales",
+  "USUARIO": "Sarah Pacheco"
+ },
+ {
+  "EQUIPO": "EC",
+  "DESCRIPCION": "Estrategias comerciales",
+  "USUARIO": "SANDRA GONZALEZ"
+ },
+ {
+  "EQUIPO": "PMM.   ",
+  "DESCRIPCION": "Gerente de Marketing de Producto  (accesorios)",
+  "USUARIO": "Itzu Jara"
+ },
+ {
+  "EQUIPO": "PMM.   ",
+  "DESCRIPCION": "Gerente de Marketing de Producto  (accesorios)",
+  "USUARIO": "Olga Sierra"
+ },
+ {
+  "EQUIPO": "DP Accesorios ",
+  "DESCRIPCION": "Accesorios ",
+  "USUARIO": "Bety Sanchez"
+ },
+ {
+  "EQUIPO": "DP Accesorios ",
+  "DESCRIPCION": "Accesorios ",
+  "USUARIO": "Leslie Cisneros"
+ },
+ {
+  "EQUIPO": "DP marcas ",
+  "DESCRIPCION": "Desarrollo de producto y marcas",
+  "USUARIO": "Miguel Rangel"
+ },
+ {
+  "EQUIPO": "Precios ",
+  "DESCRIPCION": "Precios",
+  "USUARIO": "Daniel Anguiano"
+ },
+ {
+  "EQUIPO": "Precios ",
+  "DESCRIPCION": "Precios ",
+  "USUARIO": "Erika Flores"
+ },
+ {
+  "EQUIPO": "  PI (legal)",
+  "DESCRIPCION": "Propiedad Intelectual ",
+  "USUARIO": "Gloria Guerra"
+ },
+ {
+  "EQUIPO": "SIC",
+  "DESCRIPCION": "Seguimiento a impresión de catalogo ",
+  "USUARIO": "Veronica Chaparro"
+ },
+ {
+  "EQUIPO": "SIC",
+  "DESCRIPCION": "Seguimiento a impresión de catalogo ",
+  "USUARIO": "Reyna Valadez"
+ },
+ {
+  "EQUIPO": "SIC",
+  "DESCRIPCION": "Seguimiento a impresión de catalogo ",
+  "USUARIO": "Karla Murillo"
+ },
+ {
+  "EQUIPO": "Traducciones ",
+  "DESCRIPCION": "Traduccion (Cat. USA) ",
+  "USUARIO": "Luis rubio"
+ },
+ {
+  "EQUIPO": "Web marketing",
+  "DESCRIPCION": "Solicitud de codigos Qr y pedido digital ",
+  "USUARIO": "Ana Palomares"
+ }
+
+]}

@@ -1,0 +1,24 @@
+<!doctype html>
+<head>
+    <title>Descargar</title>
+
+  
+    <link rel ="stylesheet" href="../static/estilo.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="cuerpo">
+        <div class="titulo">
+            <h1>Descargar archivo</h1>
+        </div>
+    <form method="post" enctype="multipart/form-data">
+      <label for="Name"><h2> descargame!! {{file}}</h2> </label>
+      
+        
+        
+      <button class="btn btn-primary" type="submit" value="descargar">Descargar</button>
+      <a class="btn btn-primary" href={{url_for('upload_file')}}> Inicio </a>
+        
+    </form>
+    </div>
+</body>  

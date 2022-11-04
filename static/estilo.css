@@ -1,0 +1,130 @@
+* {
+    padding: 0;
+    margin: 0;
+    color: #1a1f36;
+    box-sizing: border-box;
+    word-wrap: break-word;
+    font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica Neue,Ubuntu,sans-serif;
+  }
+  body {
+      align-items: center;
+      margin: auto;
+      background-color: #ffffff;
+      background: rgb(2,0,36);
+      background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      height: 100vh;
+  }
+
+  .titulo{
+    width: 100%;
+  }
+  .custom-input-file {
+    background-color: #9c1fc6;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 auto 0;
+    overflow: hidden;
+    padding: 10px;
+    position: relative;
+    text-align: center;
+    
+    width: 100%;
+  }
+  
+  .custom-input-file .input-file {
+   border: 10000px solid transparent;
+   width: 100%;
+   cursor: pointer;
+   font-size: px;
+   margin: 10px;
+   opacity: 0;
+   outline: 0 none;
+   padding: 10px;
+   position: absolute;
+  
+  }
+
+  h3{
+    color: #fff;
+    width: 100%;
+    font-size: 10px;
+  }
+
+  .cuerpo{
+    display: flex;
+    flex-direction: column;
+    border-radius:5px;
+    max-width: 80%;
+    padding: 50px;
+    align-content: center;
+    background: rgb(218, 217, 220);
+    
+    }
+
+  h1 {
+      letter-spacing: -1px;
+      color: #000000;
+      text-align: center;
+      font-family: 'Times New Roman', Times, serif;
+      padding: 10px;
+  }
+  a {
+    color: #5469d4;
+    text-decoration: unset;
+  }
+  .file-select {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .file-select::before {
+    background-color: #5678EF;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+    content: 'Seleccionar'; /* testo por defecto */
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+  }
+  
+
+  .btn{
+    background-color: #761a95;
+    color: #fff;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    margin-top: 20px ;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+  }
+
+  
+
+
+  .file-select input[type="file"] {
+    opacity: 0;
+    width: 200px;
+    height: 32px;
+    display: inline-block;
+  }
+  
+  #src-file1::before {
+    content: 'Seleccionar Archivo 1';
+  }
+  
+  #src-file2::before {
+    content: 'Seleccionar Archivo 2';
+  }
