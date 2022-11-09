@@ -74,9 +74,10 @@ def transform(filename):
                 indx = row.find(':')
                 k=row[:indx].strip()
                 v=row[(indx+2):].strip()
-                data['pagina'].append(i+1)
-                data['accion'].append(k)
-                data['nombre'].append(v)    
+                if k=="Aprobación solicitada":
+                    data['pagina'].append(i+1)
+                    data['accion'].append(k)
+                    data['nombre'].append(v)    
     frame = pd.DataFrame.from_dict(data)
     filename=filename.replace('pdf', 'xlsx')
     #frame.to_excel(f'./downloads/{filename}',sheet_name='Andrea', index = False)
@@ -89,9 +90,10 @@ def transform(filename):
     frame2 = pd.DataFrame.from_dict(data2)
     
     fframe = pd.merge(frame2[['equipo','descripcion','usuario']],frame[['nombre','accion']],how="left",left_on='usuario',right_on='nombre')
-    fframe=fframe.groupby(['equipo','usuario']).agg(num_paginas=('nombre','count'))
-    fframe["maximo_num_paginas"]=fframe.groupby('equipo')['num_paginas'].transform(max)
-    fframe.to_excel(f'./downloads/{filename}',sheet_name='Andrea', index = True)
+    fframe=fframe.groupby(['equipo']).agg(num_paginas=('nombre','count'))
+    fframe=fframe.groupby('equipo')['num_paginas'].transform(max)
+    
+    fframe.to_excel(f'./downloads/{filename}',sheet_name='Andrea', index = True,encoding='cp-1252')
     
     return redirect(url_for('descargar',file=filename))
    
@@ -128,6 +130,5 @@ def uploaded_file(filename):
 if __name__ == "__main__":
  app.run()
                     
-#if __name__ == "__main__":
-# app.run(debug=True, port=5000)
+
            

@@ -37,11 +37,12 @@ for i in range (0,number_of_pages):
                 indx = row.find(':')
                 k=row[:indx].strip()
                 v=row[(indx+2):].strip()
-                data['pagina'].append(i+1)
-                data['accion'].append(k)
-                data['nombre'].append(v)    
+                if k=="Aprobación solicitada":
+                    data['pagina'].append(i+1)
+                    data['accion'].append(k)
+                    data['nombre'].append(v)    
 frame = pd.DataFrame.from_dict(data)
-
+print(frame)
 for row in dim['dim_usuarios']:
     data2["equipo"].append(row["EQUIPO"])
     data2["descripcion"].append(row["DESCRIPCION"])
