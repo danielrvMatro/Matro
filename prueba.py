@@ -19,7 +19,7 @@ ruta=""
 ds={}
 
 
-ruta=f"./uploads/INFORME_PRUEBA.pdf"
+ruta=f"./uploads/anotaciones.pdf"
 pdfFileObj = open(ruta, 'rb')
 dim = json.load( open('./uploads/Datos_US.json'))
 pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
@@ -52,8 +52,12 @@ frame2 = pd.DataFrame.from_dict(data2)
 
 fframe = pd.merge(frame2[['equipo','descripcion','usuario']],frame[['nombre','accion']],how="left",left_on='usuario',right_on='nombre')
 fframe=fframe.groupby(['equipo','usuario']).agg(Npaginas=('nombre','count'))
-fframe["Mpag"]=fframe.groupby('equipo')['Npaginas'].transform(max)
+fframe['Mpag']=fframe.groupby('equipo')['Npaginas'].transform(max)
+fframe.reset_index(inplace=True)
+del fframe['usuario']
+del fframe['Npaginas']
+fframe= fframe.drop_duplicates()
+print(fframe)
 
-
-fframe.to_excel('./downloads/Test.xlsx',sheet_name='Andrea', index = True)
+#fframe.to_excel('./downloads/Test.xlsx',sheet_name='Andrea', index = True)
 

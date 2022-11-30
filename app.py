@@ -5,11 +5,6 @@ from werkzeug.utils import secure_filename
 import PyPDF2
 import json
 
-
-
-
-
-# en el mismo lugar del archivo main.py crear la carpeta "archivos"
 UPLOAD_FOLDER = 'uploads' # /ruta/a/la/carpeta
 DOWNLOAD_FOLDER ='downloads'
 dim = json.load( open('./uploads/Datos_US.json'))
@@ -80,7 +75,7 @@ def transform(filename):
                     data['nombre'].append(v)    
     frame = pd.DataFrame.from_dict(data)
     filename=filename.replace('pdf', 'xlsx')
-    #frame.to_excel(f'./downloads/{filename}',sheet_name='Andrea', index = False)
+
     
     for row in dim['dim_usuarios']:
         data2["equipo"].append(row["EQUIPO"])
@@ -89,9 +84,14 @@ def transform(filename):
 
     frame2 = pd.DataFrame.from_dict(data2)
     
+    
     fframe = pd.merge(frame2[['equipo','descripcion','usuario']],frame[['nombre','accion']],how="left",left_on='usuario',right_on='nombre')
-    fframe=fframe.groupby(['equipo']).agg(num_paginas=('nombre','count'))
-    fframe=fframe.groupby('equipo')['num_paginas'].transform(max)
+    fframe=fframe.groupby(['equipo','usuario']).agg(Npaginas=('nombre','count'))
+    fframe['Mpag']=fframe.groupby('equipo')['Npaginas'].transform(max)
+    fframe.reset_index(inplace=True)
+    del fframe['usuario']
+    del fframe['Npaginas']
+    fframe= fframe.drop_duplicates()
     
     fframe.to_excel(f'./downloads/{filename}',sheet_name='Andrea', index = True,encoding='cp-1252')
     
@@ -100,28 +100,10 @@ def transform(filename):
 @app.route('/descargar/<file>', methods=['GET', 'POST'])
 def descargar(file="None"):
     if request.method == 'POST': 
-        #return  redirect(url_for('upload_file'))
         file_path = os.path.join(app.config['DOWNLOAD_FOLDER'], file)
         return send_file(file_path)
     return  render_template('descargar.html',file=file)
 
-#@app.route('/', methods=['GET', 'POST'])
-#def upload_file():
-#    if request.method == 'POST':
-#         
-#        if 'file' not in request.files:
-#            flash('No file part')
-#            return redirect(request.url)
-#        file = request.files['file']
-#        
-#        if file.filename == '':
-#            flash('No selected file')
-#            return redirect(request.url)
-#        if file and allowed_file(file.filename):
-#            filename = secure_filename(file.filename)
-#            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-#            return redirect(url_for('uploaded_file',filename=filename))
-#    return  render_template('upload.html')
 
 @app.route('/uploads/<filename>')
 def uploaded_file(filename):
