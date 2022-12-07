@@ -52,6 +52,8 @@ def upload_file():
 
 @app.route('/transform/<filename>')
 def transform(filename):
+    d=data
+    
     ruta=f"./uploads/{filename}"
     pdfFileObj = open(ruta, 'rb')
     pdfReader = PyPDF2.PdfFileReader(pdfFileObj)
@@ -70,19 +72,19 @@ def transform(filename):
                 k=row[:indx].strip()
                 v=row[(indx+2):].strip()
                 if k=="Aprobación solicitada":
-                    data['pagina'].append(i+1)
-                    data['accion'].append(k)
-                    data['nombre'].append(v)    
-    frame = pd.DataFrame.from_dict(data)
+                    d['pagina'].append(i+1)
+                    d['accion'].append(k)
+                    d['nombre'].append(v)    
+    frame = pd.DataFrame.from_dict(d)
     filename=filename.replace('pdf', 'xlsx')
 
-    
+    d2=data2
     for row in dim['dim_usuarios']:
-        data2["equipo"].append(row["EQUIPO"])
-        data2["descripcion"].append(row["DESCRIPCION"])
-        data2["usuario"].append(row["USUARIO"].upper())
+        d2["equipo"].append(row["EQUIPO"])
+        d2["descripcion"].append(row["DESCRIPCION"])
+        d2["usuario"].append(row["USUARIO"].upper())
 
-    frame2 = pd.DataFrame.from_dict(data2)
+    frame2 = pd.DataFrame.from_dict(d2)
     
     
     fframe = pd.merge(frame2[['equipo','descripcion','usuario']],frame[['nombre','accion']],how="left",left_on='usuario',right_on='nombre')
